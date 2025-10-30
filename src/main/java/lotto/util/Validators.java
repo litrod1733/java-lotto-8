@@ -15,7 +15,7 @@ public final class Validators {
 	}
 
 	public static void requireDivisibleBy(long value, long unit, String message) {
-		require((value & unit) == 0, message);
+		require((value % unit) == 0, message);
 	}
 
 	public static void validateRange(int n) {
