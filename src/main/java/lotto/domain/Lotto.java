@@ -16,5 +16,9 @@ public class Lotto {
         }
     }
 
+    public java.util.List<Integer> numbers() {
+        return java.util.List.copyOf(numbers);
+    }
+
     // TODO: 추가 기능 구현
 }

@@ -1,4 +1,7 @@
 package lotto.domain.generator;
 
-public class LottoNumberGenerator {
+import lotto.domain.LottoTicket;
+
+public interface LottoNumberGenerator {
+	LottoTicket generate();
 }
