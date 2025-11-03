@@ -45,11 +45,11 @@ public class OutputViewTest {
 		assertTrue(printed.contains("당첨 통계"));
 		assertTrue(printed.contains("---------"));
 
-		assertTrue(printed.contains("5개 일치, 보너스 볼 일치 (30000000원) - 1개"));
-		assertTrue(printed.contains("4개 일치 (50000원) - 1개"));
-		assertTrue(printed.contains("3개 일치 (5000원) - 2개"));
+		assertTrue(printed.contains("5개 일치, 보너스 볼 일치 (30,000,000원) - 1개"));
+		assertTrue(printed.contains("4개 일치 (50,000원) - 1개"));
+		assertTrue(printed.contains("3개 일치 (5,000원) - 2개"));
 		assertFalse(printed.contains("MISS"));
 
-		assertTrue(printed.matches("(?s).*총 수익률은 \\d+\\.\\d{2}%입니다\\..*"));
+		assertTrue(printed.matches("(?s).*총 수익률은 \\d+\\.\\d%입니다\\..*"));
 	}
 }
