@@ -2,6 +2,7 @@ package lotto.view;
 
 import lotto.domain.LottoResult;
 import lotto.domain.Rank;
+import lotto.domain.Tickets;
 
 public class OutputView {
 
@@ -15,6 +16,11 @@ public class OutputView {
 		});
 
 		System.out.printf("총 수익률은 %.2f%%입니다.%n", profitRate);
+	}
+
+	public static void printPurchasedTicket(Tickets tickets) {
+		System.out.printf("%d개를 구매했습니다.%n", tickets.size());
+		tickets.values().forEach(ticket -> System.out.println(ticket.lottoNumbers()));
 	}
 
 	private static void printRankResult(Rank rank, int count) {
