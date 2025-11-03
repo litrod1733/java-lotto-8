@@ -19,6 +19,10 @@ public final class LottoTicket {
 		return lotto.numbers();
 	}
 
+	public boolean contains(int number) {
+		return lotto.numbers().contains(number);
+	}
+
 	private static List<Integer> sort(List<Integer> numbers) {
 		Validators.require(Objects.nonNull(numbers), "[ERROR] 로또 번호가 존재하지 않습니다.");
 		return numbers.stream().sorted().collect(Collectors.toList());

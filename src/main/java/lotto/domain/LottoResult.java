@@ -3,10 +3,10 @@ package lotto.domain;
 import java.util.EnumMap;
 import java.util.Map;
 
-public class Result {
+public class LottoResult {
 	private final Map<Rank, Integer> results = new EnumMap<>(Rank.class);
 
-	public Result() {
+	public LottoResult() {
 		for (Rank rank : Rank.values()) {
 			results.put(rank, 0);
 		}
